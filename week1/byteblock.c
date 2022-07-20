@@ -9,4 +9,5 @@ int main()
     printf("Content of second byte block is:%d\n",(n>>16)&255);
     printf("Content of third byte block is:%d\n",(n>>8)&255);
     printf("Content of fourth byte block is:%d\n",n&255);
+    return 0;
 }
