@@ -1,2 +1,2 @@
 # DSA Lab CSE 39
- DSA Lab codes for cse 39
+ DSA Lab codes for CSE 39
