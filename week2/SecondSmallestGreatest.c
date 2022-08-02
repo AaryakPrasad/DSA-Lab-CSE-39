@@ -23,6 +23,6 @@ int main()
             }   
         }
     }
-    printf("\nThe smallest is %d and greatest is %d",a[1],a[n-2]);
+    printf("\nThe second smallest is %d and second greatest is %d",a[1],a[n-2]);
     return 0;
 }
