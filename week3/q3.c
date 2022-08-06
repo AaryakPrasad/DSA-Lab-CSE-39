@@ -10,10 +10,10 @@ int main()
         int total;
         char grade;
     };
-    int n,temp;
+    int n;
     printf("Enter the number of students:");
     scanf("%d", &n);
-    struct student s[n];
+    struct student s[n],temp;
     for (int i = 0; i < n; i++)
     {
         printf("\nEnter name: ");
@@ -48,9 +48,9 @@ int main()
         {
             if (s[j].rollno>s[j+1].rollno)
             {
-                temp=s[j].rollno;
-                s[j].rollno=s[j+1].rollno;
-                s[j+1].rollno=temp;
+                temp=s[j];
+                s[j]=s[j+1];
+                s[j+1]=temp;
             }   
         }
     }
