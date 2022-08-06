@@ -11,8 +11,8 @@ int main()
         int second;
         char am_pm[2];
     };
-    struct train t[2];
-    for (int i = 0; i < 2; i++)
+    struct train t[5];
+    for (int i = 0; i < 5; i++)
     {
         printf("\nEnter name: ");
         scanf(" %[^\n]", t[i].name);
@@ -25,14 +25,13 @@ int main()
         printf("Enter am or pm: ");
         scanf(" %[^\n]", t[i].am_pm);
     }
-    for (int i=0;i<2;i++)
+    for (int i=0;i<5;i++)
         if (strcmp(t[i].am_pm,"pm")==0)
             t[i].hour+=12;
     printf("\nThe Schedule is:\n");
     printf("Name\t\tTime");
-    for (int i = 0; i < 2; i++)
-    {
+    for (int i = 0; i < 5; i++)
         printf("\n%s\t\t%d:%d:%d hours", t[i].name, t[i].hour, t[i].minute, t[i].second);
-    }
+        
     return 0;
 }
