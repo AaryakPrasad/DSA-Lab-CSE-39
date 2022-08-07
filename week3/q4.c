@@ -14,7 +14,7 @@ struct employee
 void sort_name(struct employee *e,int n)
 {
     struct employee temp;
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n-i-1; j++)
             if (strcmp(e[j].name, e[j + 1].name) > 0)
             {
@@ -31,7 +31,7 @@ void sort_dob(struct employee *e,int n)
 {
     struct employee temp;
     int flag=0;
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n-i-1; j++)
         {
             if (e[j].dob.year>e[j+1].dob.year)
@@ -49,7 +49,7 @@ void sort_dob(struct employee *e,int n)
             }
             flag = 0; 
         }
-    printf("\nThe list of employees sorted by name looks like:\n");
+    printf("\nThe list of employees sorted by date of birth looks like:\n");
     printf("Name\tAge\tSalary\tDate of Birth\tDate of Joining\tCity\n");
     for (int i = 0; i < n; i++)
         printf("%s\t%d\t%d\t%d/%d/%d\t%d/%d/%d\t%s\n", e[i].name, e[i].age, e[i].salary, e[i].dob.day, e[i].dob.month, e[i].dob.year, e[i].doj.day, e[i].doj.month, e[i].doj.year, e[i].city);
@@ -58,7 +58,7 @@ void sort_doj(struct employee *e,int n)
 {
     struct employee temp;
     int flag=0;
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n-i-1; j++)
         {
             if (e[j].doj.year>e[j+1].doj.year)
@@ -75,7 +75,7 @@ void sort_doj(struct employee *e,int n)
                 e[j+1]=temp;
             }
         }
-    printf("\nThe list of employees sorted by name looks like:\n");
+    printf("\nThe list of employees sorted by date of joining looks like:\n");
     printf("Name\tAge\tSalary\tDate of Birth\tDate of Joining\tCity\n");
     for (int i = 0; i < n; i++)
         printf("%s\t%d\t%d\t%d/%d/%d\t%d/%d/%d\t%s\n", e[i].name, e[i].age, e[i].salary, e[i].dob.day, e[i].dob.month, e[i].dob.year, e[i].doj.day, e[i].doj.month, e[i].doj.year, e[i].city);
@@ -83,7 +83,7 @@ void sort_doj(struct employee *e,int n)
 void sort_salary(struct employee *e,int n)
 {
     struct employee temp;
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n-i-1; j++)
         {
             if (e[j].salary>e[j+1].salary)
@@ -93,7 +93,7 @@ void sort_salary(struct employee *e,int n)
                 e[j+1]=temp;
             }
         }
-    printf("\nThe list of employees sorted by name looks like:\n");
+    printf("\nThe list of employees sorted by salary looks like:\n");
     printf("Name\tAge\tSalary\tDate of Birth\tDate of Joining\tCity\n");
     for (int i = 0; i < n; i++)
         printf("%s\t%d\t%d\t%d/%d/%d\t%d/%d/%d\t%s\n", e[i].name, e[i].age, e[i].salary, e[i].dob.day, e[i].dob.month, e[i].dob.year, e[i].doj.day, e[i].doj.month, e[i].doj.year, e[i].city);
